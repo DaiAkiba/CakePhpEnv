@@ -1,9 +1,13 @@
 source "https://supermarket.getchef.com"
+source "https://supermarket.chef.io"
 
-cookbook "yum"
 cookbook "git"
 cookbook "vim"
-cookbook "apache2"
-cookbook "php"
+cookbook "php55", git: 'https://github.com/aporat/php55-cookbook.git'
 cookbook "mysql"
+cookbook "mysql_server", path: 'site-cookbooks/mysql_server'
+cookbook "mysql_client", path: 'site-cookbooks/mysql_client'
 cookbook "composer"
+cookbook "customphp", path: 'site-cookbooks/customphp'
+cookbook "cakephp", path: 'site-cookbooks/cakephp'
+cookbook "apache2"
